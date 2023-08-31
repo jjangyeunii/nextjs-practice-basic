@@ -7,9 +7,12 @@ type Props = {
 };
 
 export default async function Read({ params }: Props) {
-  const res = await fetch(`http://localhost:9999/topics/${params.id}`, {
-    cache: "no-store",
-  });
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}topics/${params.id}`,
+    {
+      cache: "no-store",
+    }
+  );
   const topic: Topic = await res.json();
   return (
     <section>
