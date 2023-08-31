@@ -71,7 +71,7 @@ export default function Update() {
         ></textarea>
       </p>
       <p>
-        <button type="submit">Create</button>
+        <button type="submit">Update</button>
       </p>
     </form>
   );
