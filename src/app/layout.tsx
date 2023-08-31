@@ -2,6 +2,7 @@ import Link from "next/link";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Topic } from "@/model/topic";
+import Control from "@/components/Control";
 
 export const metadata: Metadata = {
   title: "Web tutorials",
@@ -32,17 +33,7 @@ export default async function RootLayout({
           ))}
         </ol>
         {children}
-        <ul>
-          <li>
-            <Link href="/create">Create</Link>
-          </li>
-          <li>
-            <Link href="/update">Update</Link>
-          </li>
-          <li>
-            <button>delete</button>
-          </li>
-        </ul>
+        <Control />
       </body>
     </html>
   );
